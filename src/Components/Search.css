@@ -1,0 +1,50 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 30px;
+}
+
+.control {
+  width: 400px;
+  height: 50px;
+}
+
+.control input {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(209, 23%, 22%);
+  padding: 20px;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.selector {
+  height: 100%;
+}
+
+.select {
+  width: 200px;
+  height: 100%;
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.select option {
+  margin-top: 10px;
+}
