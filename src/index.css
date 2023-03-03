@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --Dark-Blue-Mode: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  padding: 20px;
+  background-color: var(--Very-Dark-Blue-Background);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.info {
+  height: 100%;
+  background-color: var(--Dark-Blue-Mode);
+  color: white;
+  padding: 20px;
+}
+.info span {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card {
+  overflow: hidden;
+  max-width: 360px;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
