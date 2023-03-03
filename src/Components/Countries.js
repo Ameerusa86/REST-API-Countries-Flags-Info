@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const URL = "https://restcountries.com/v3.1/all";
 
 const Countries = () => {
-  const [countries, setCountries] = React.useState([]);
+  const [countries, setCountries] = useState([]);
 
-  React.useEffect(() => {
-    fetch(URL)
-      .then((response) => response.json())
-      .then((data) => setCountries(data));
+  useEffect(() => {
+    const getCountries = async () => {
+      try {
+        const res = await fetch(URL);
+        const data = await res.json();
+        setCountries(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getCountries();
   }, []);
-
   return (
     <>
       <section className="grid">

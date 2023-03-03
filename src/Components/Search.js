@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.css";
 import "../index.css";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
-const Search = () => {
+const URL_SEARCH = "https://restcountries.com/v3.1/name/{name}";
+
+const Search = ({ setCountries }) => {
+  const [name, setName] = useState("");
+
+  const searchCountry = async () => {
+    const response = await fetch(URL_SEARCH.replace("{name}", name));
+    const data = await response.json();
+    console.log(data);
+    setCountries(data);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    searchCountry();
+  };
+
   return (
     <section className="search">
-      <Row>
+      <Row md={4}>
         <Col xs={12} md={8}>
-          <form className="control">
+          <form className="control" onSubmit={handleSearch}>
             <input
               type="search"
               name="search"
               id="search"
               placeholder="Search a country"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              required
             />
           </form>
         </Col>
-        <Col>
+        <Col className="selectorCol">
           <div className="selector">
             <select name="select" id="select" className="select">
               <option value="Asia">Select Region</option>

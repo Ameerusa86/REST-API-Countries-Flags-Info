@@ -62,16 +62,17 @@ body {
   border: 0.25px solid transparent;
 }
 
+@media (min-width: 375px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .search {
-    display: grid;
-    grid-template-rows: 1fr;
-  }
 }
-
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);

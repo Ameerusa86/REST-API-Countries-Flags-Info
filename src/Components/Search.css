@@ -1,4 +1,6 @@
 .search {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 50px;
   background-color: var(--color-background);
@@ -8,6 +10,7 @@
   cursor: pointer;
   user-select: none;
   margin-bottom: 30px;
+  z-index: 9999;
 }
 
 .control {
@@ -28,6 +31,8 @@
 }
 
 .selector {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
   height: 100%;
   width: 100%;
