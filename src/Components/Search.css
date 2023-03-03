@@ -1,7 +1,4 @@
 .search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 50px;
   background-color: var(--color-background);
@@ -14,7 +11,7 @@
 }
 
 .control {
-  width: 400px;
+  width: 100%px;
   height: 50px;
 }
 
@@ -24,27 +21,33 @@
   background-color: hsl(209, 23%, 22%);
   padding: 20px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: none;
   outline: none;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .selector {
+  position: relative;
   height: 100%;
+  width: 100%;
+  right: 0;
 }
 
 .select {
-  width: 200px;
+  max-width: 250px;
   height: 100%;
   background-color: hsl(209, 23%, 22%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: none;
   outline: none;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  font-family: inherit;
+  padding: 8px;
 }
 
 .select option {
   margin-top: 10px;
+  font-family: inherit;
 }

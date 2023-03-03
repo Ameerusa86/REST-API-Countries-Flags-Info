@@ -66,6 +66,10 @@ body {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .search {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
 }
 
 @media (min-width: 768px) {
