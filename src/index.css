@@ -121,6 +121,14 @@ body {
   font-family: inherit;
 }
 
+.badge {
+  border: none;
+  outline: none;
+  width: 6rem;
+  height: 3rem;
+  background-color: blue;
+}
+
 @media (min-width: 375px) {
   .grid {
     grid-template-columns: 1fr;

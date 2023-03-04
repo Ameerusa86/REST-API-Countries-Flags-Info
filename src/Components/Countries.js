@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const URL = "https://restcountries.com/v3.1/all";
 const URL_SEARCH = "https://restcountries.com/v3.1/name/{name}";
@@ -94,29 +95,30 @@ const Countries = () => {
           </form>
         </Row>
       </section>
-
       <section className="grid">
         {countries.map((country) => {
           const { id, name, population, flags, region, capital } = country;
 
           return (
-            <article key={id} className="container">
-              <div className="card">
-                <img src={flags.png} alt={name} />
-                <div className="info">
-                  <h3 className="title">{name.common}</h3>
-                  <h4>
-                    <span>Population:</span> {population}
-                  </h4>
-                  <h4>
-                    <span>Region:</span> {region}
-                  </h4>
-                  <h4>
-                    <span>Capital:</span> {capital}
-                  </h4>
+            <Link to={`/${name.common}`}>
+              <article key={id} className="container">
+                <div className="card">
+                  <img src={flags.png} alt={name} />
+                  <div className="info">
+                    <h3 className="title">{name.common}</h3>
+                    <h4>
+                      <span>Population:</span> {population}
+                    </h4>
+                    <h4>
+                      <span>Region:</span> {region}
+                    </h4>
+                    <h4>
+                      <span>Capital:</span> {capital}
+                    </h4>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           );
         })}
       </section>
