@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+
+![REST Countries API](https://user-images.githubusercontent.com/46317379/235668511-6f64e3a0-9fdf-45dc-b368-c9e704487da7.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
